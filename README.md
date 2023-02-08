@@ -15,6 +15,7 @@ Used to view the works and contact information of the developer Korey Hermann
 ## Credits
 
 -TailwindCSS https://tailwindcss.com/
+
 -WeatherMap API https://openweathermap.org/forecast5
 
 ## License
