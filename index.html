@@ -1,11 +1,11 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets\style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -20,69 +20,50 @@ s<!DOCTYPE html>
               </div>
             </div>
           </div>
-          
-    <form>   
-     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search for a city:</label>
-        <div class="relative">
-            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            </div>
-            <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for a city:" required>
-            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-        </div>
-    </form>
-    <div class="mb-3 font-dark text-black-500 dark:text-gray-400" id="current-weather">
-        <h2 id="current-city"></h2>
-            <p>Temperature:<span class="current" id="temperature"></span></p>
-            <p>Humidity:<span class="current" id="humidity"></span></p> 
-            <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
-        </div>
-        </div>
-        <div class="col-sm-12" id ="future-weather">
-            <h3>Five Day Forecast:</h3>
-            <div class="grid grid-cols-5 gap-4">
-                <div id = fDay1>Day 1
-                    <p>Temp:<span id="fTemp1"></span></p>
-                    <p>Wind:<span id="fWind1"></span></p>
-                    <p>Humidity:<span id="fHumidity1"></span></p>
+        <div class="row">
+               <h3 class = "mt-8">Search for a city:</h3>
+                    <input type="text" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4" id="search-city" aria-label="City Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button id="search-button"><i class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</i></button>
+                    </div>
                 </div>
-                    
-                <div id = fDay2>Day 2
-                    <p>Temp:<span id="fTemp2"></span></p>
-                    <p>Wind:<span id="fWind2"></span></p>
-                    <p>Humidity:<span id="fHumidity2"></span></p>
-                </div>
-                
-                <div id = fDay3>Day 3
-                    <p>Temp:<span id="fTemp3"></span></p>
-                    <p>Wind:<span id="fWind3"></span></p>
-                    <p>Humidity:<span id="fHumidity3"></span></p>
-                </div>
-                
-                <div id = fDay4>Day 4
-                    <p>Temp:<span id="fTemp4"></span></p>
-                    <p>Wind:<span id="fWind4"></span></p>
-                    <p>Humidity:<span id="fHumidity4"></span></p>
-                </div>
-                
-                <div id = fDay5>Day 5
-                    <p>Temp:<span id="fTemp5"></span></p>
-                    <p>Wind:<span id="fWind5"></span></p>
-                    <p>Humidity:<span id="fHumidity5"></span></p>
+               
+            </div>   
+            <div class="mb-3 font-dark text-black-500 dark:text-gray-400 border-gray-300 rounded-lg" id="current-weather">
+                <h2 id="current-city" class = "mt-8"></h2>
+                    <p>Temperature:<span class="current" id="temperature"></span></p>
+                    <p>Humidity:<span class="current" id="humidity"></span></p> 
+                    <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                <div id ="future-weather">
+                    <h3 class = "mt-8">Five Day Forecast:</h3>
+                    <div class="grid grid-cols-5 gap-4 mt-8 border border-gray-300 rounded-lg">
+                        <div class="text-black " >
+                            <p>Temp:<span id="fTemp0"></span></p>
+                            <p>Humidity:<span id="fHumidity0"></span></p>
+                        </div>
+                        <div class="text-black" >
+                            <p>Temp:<span id="fTemp1"></span></p>
+                            <p>Humidity:<span id="fHumidity1"></span></p>
+                        </div>
+                        <div class="text-black">
+                            <p>Temp:<span id="fTemp2"></span></p>
+                            <p>Humidity:<span id="fHumidity2"></span></p>
+                        </div>
+                        <div class="text-black">
+                            <p>Temp:<span id="fTemp3"></span></p>
+                            <p>Humidity:<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="text-black" >
+                            <p>Temp:<span id="fTemp4"></span></p>
+                            <p>Humidity:<span id="fHumidity4"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        
+        </div>
     </div>
-</div>
-</div>
-    
-
-
-    </header>
-
-
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets\script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
