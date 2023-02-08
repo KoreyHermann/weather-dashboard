@@ -7,7 +7,6 @@ var currentCity = $("#current-city");
 var currentTemperature = $("#temperature");
 var currentHumidty= $("#humidity");
 var currentWSpeed=$("#wind-speed");
-var currentUvindex= $("#uv-index");
 var sCity=[];
 
 // search function
